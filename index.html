@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge - FIAP</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div id="box-menu">
+      <button id="btn-menu"><i class="icon-menu fa-solid fa-bars"></i></button>
+      <nav id="nav">
+        <ul>
+          <li><a class="link" href="index.html">Configurações</a></li>
+          <li><a class="link" href="index.html">Sobre</a></li>
+        </ul>
+        <input type="checkbox" class="checkbox" id="chk">
+        
+        <label class="label" for="chk">
+          <img class="icon-theme" src="./img/moon.svg" alt="">
+          <img class="icon-theme" src="./img/sun.svg" alt="">
+          <div class="ball"></div>
+        </label>
+      </nav>
+    </div>
+    
+    <div id="date-hours">
+      <p id="date"></p>
+      <p id="hours"></p>
+    </div>
+  </header>
+  
+  <main>
+    <div id="container">
+      
+      <div id="btn-box">
+        <button id="openGate" class="btn-action">
+          <img src="./img/gate.svg" alt="Icon de um portão"><br>
+          Abrir portão
+        </button>
+      </div>
+  
+      <div id="btn-box">
+        <button class="btn-action">
+          <img src="./img/lamp.png" alt="Icon de uma lâmpada"><br>
+          Acender a luz da garagem
+        </button>
+      </div>
+  
+      <div id="btn-box">
+        <button class="btn-action">
+          <img src="./img/camera.svg" alt="Icon de uma câmera"><br>
+          Ativar câmeras de segurança
+        </button>
+      </div>
+      
+      <div id="btn-box">
+        <button class="btn-action">
+          <img src="./img/car.svg" alt="Icon de um carro"><br>
+          Detalhes da viagem
+        </button>
+      </div>
+  
+      <div id="btn-box">
+        <button class="btn-action">
+          <img src="img/lamp.png" alt=""><br>
+          Lorem ipsum dolor
+        </button>
+      </div>
+  
+      <div id="btn-box">
+        <button class="btn-action">
+          <img src="img/lamp.png" alt=""><br>
+          Lorem ipsum dolor
+        </button>
+      </div>
+      
+    </div>
+
+    <div id="gasoline-house">
+      <div class="information" id="gasoline">
+        <i class="gas-house fa-solid fa-gas-pump"></i>
+        <p>80%</p>
+      </div>
+      <div class="information" id="house-distance">
+        <i class="gas-house fa-sharp fa-solid fa-house"></i>
+        <p>50m</p>
+      </div>
+    </div>
+
+    <span class="hide" id="msg" >Portão aberto com sucesso!</span>
+
+  </main>
+
+  <script src="https://kit.fontawesome.com/464370779f.js" crossorigin="anonymous"></script>
+</body>
+</html>
