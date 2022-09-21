@@ -15,12 +15,13 @@
   <script src="./js/script.js" defer></script>
 </head>
 <body>
-  <header>
+  <header class="hide">
     <div id="box-menu">
       <button id="btn-menu"><i class="icon-menu fa-solid fa-bars"></i></button>
       <nav id="nav">
         <ul>
-          <li><a class="link" href="index.html">Configurações</a></li>
+          <li><a id="btn-trocar-name" class="link" href="index.html">Trocar nome</a></li>
+          <input id="trocar-name" type="text" class="hide">
           <li><a class="link" href="index.html">Sobre</a></li>
         </ul>
         <input type="checkbox" class="checkbox" id="chk">
@@ -39,8 +40,9 @@
     </div>
   </header>
   
-  <main>
-    <div id="container">
+  <main class="hide">
+    <h1>Olá <span id="name"></span>, <span id="greeting"></span></h1>
+    <section id="container">
       
       <div id="btn-box">
         <button id="openGate" class="btn-action">
@@ -84,9 +86,9 @@
         </button>
       </div>
       
-    </div>
+    </section>
 
-    <div id="gasoline-house">
+    <section id="gasoline-house">
       <div class="information" id="gasoline">
         <i class="gas-house fa-solid fa-gas-pump"></i>
         <p>80%</p>
@@ -95,11 +97,19 @@
         <i class="gas-house fa-sharp fa-solid fa-house"></i>
         <p>50m</p>
       </div>
-    </div>
+    </section>
 
     <span class="hide" id="msg" >Portão aberto com sucesso!</span>
 
   </main>
+
+  <div id="add-name">
+    <form>
+      <label for="">Bem vindo(a)!<br> Qual é o seu nome?</label>
+      <input type="text" id="input-name">
+      <button id="btn-confirm">Confirmar</button>
+    </form>
+  </div>
 
   <script src="https://kit.fontawesome.com/464370779f.js" crossorigin="anonymous"></script>
 </body>

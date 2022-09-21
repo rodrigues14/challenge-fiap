@@ -1,3 +1,34 @@
+// getting username
+const btnConfirmar = document.querySelector("#btn-confirm");
+
+function addFirstName() {
+    const inputNome = document.querySelector("#input-name");
+    const header = document.querySelector("header");
+    const main = document.querySelector("main");
+    const divAddName = document.querySelector("#add-name");
+    const userName = document.querySelector("#name");
+    
+    if (inputNome.value == "") {
+        alert("Digite seu nome para começar.");
+    } else {
+
+        header.classList.remove("hide");
+        main.classList.remove("hide");
+        divAddName.style.display = "none";
+        
+        // change the name in h1
+        userName.textContent = inputNome.value;
+    }
+}
+
+btnConfirmar.addEventListener("click", (e) => {
+
+    e.preventDefault();
+    addFirstName();
+
+});
+
+
 // activating the mobile btn
 const btnMobile = document.querySelector('#btn-menu');
 
@@ -41,6 +72,19 @@ function dateAndHours() {
 
     const areaHours = document.querySelector('#hours');
     areaHours.innerHTML = `${hours}:${minutes}:${seconds}`;
+
+    // change the greeting
+    const greeting = document.querySelector("#greeting");
+    
+    if (hours >= 06 && hours < 12) {
+        greeting.textContent = "bom dia!"
+    } else if (hours >= 12 && hours < 18) {
+        greeting.textContent = "boa tarde!"
+    } else if (hours >= 18 && hours <24) {
+        greeting.textContent = "boa noite!"
+    } else {
+        greeting.textContent = "boa madrugada!"
+    }
 
 }
 setInterval(dateAndHours);
