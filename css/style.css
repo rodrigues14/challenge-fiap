@@ -23,6 +23,7 @@ body {
     background-color: var(--bg-color);
     min-height: calc(100vh - 20px);
     transition: background .2s linear;
+    overflow-x: hidden;
 }
 
 body.dark {
@@ -267,6 +268,30 @@ img {
     padding: 20px;
     border-radius: 15px;
 }
+
+#feedback {
+    font-size: 20px;
+    position: absolute;
+    color: #F5F5F5;
+    top: 20px;
+    right: 10px;
+    background-color: #ff4040;
+    padding: 20px;
+    border-radius: 5px;
+    animation: fromRight .7s .5s backwards;
+}
+
+@keyframes fromRight {
+    from {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 @media screen and (max-width: 550px) {
     header {

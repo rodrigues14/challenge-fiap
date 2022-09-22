@@ -2,6 +2,19 @@
 const btnConfirmar = document.querySelector("#btn-confirm");
 const userName = document.querySelector("#name");
 
+
+function returnMsgErro(value) {
+
+  const alertFeedback = document.querySelector("#feedback");
+  alertFeedback.classList.remove("hide");
+  alertFeedback.textContent = value;
+
+  setTimeout(() => {
+    alertFeedback.classList.add("hide");
+  }, 3500);
+  
+}
+
 function addFirstName() {
     const inputNome = document.querySelector("#input-name");
     const header = document.querySelector("header");
@@ -9,7 +22,7 @@ function addFirstName() {
     const divAddName = document.querySelector("#add-name");
     
     if (inputNome.value == "") {
-        alert("Digite seu nome para começar.");
+      returnMsgErro("Digite seu nome para começar!");
     } else {
 
         header.classList.remove("hide");
@@ -40,7 +53,7 @@ function changeName() {
 
   confirmChangeName.addEventListener("click", (e) => {
       if (inputChangeName.value == "") {
-          alert("O campo precisa estar preenchido!");
+        returnMsgErro("Este campo precisa estar preenchido!");
       } else {
 
           userName.textContent = inputChangeName.value;
