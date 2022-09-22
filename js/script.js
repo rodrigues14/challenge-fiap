@@ -1,12 +1,12 @@
 // getting username
 const btnConfirmar = document.querySelector("#btn-confirm");
+const userName = document.querySelector("#name");
 
 function addFirstName() {
     const inputNome = document.querySelector("#input-name");
     const header = document.querySelector("header");
     const main = document.querySelector("main");
     const divAddName = document.querySelector("#add-name");
-    const userName = document.querySelector("#name");
     
     if (inputNome.value == "") {
         alert("Digite seu nome para começar.");
@@ -25,6 +25,46 @@ btnConfirmar.addEventListener("click", (e) => {
 
     e.preventDefault();
     addFirstName();
+
+});
+
+
+// change name
+const inputChangeName = document.querySelector("#change-name");
+const btnTrocarNome = document.querySelector("#btn-trocar-name");
+const confirmChangeName = document.querySelector("#confirm-name-change");
+
+function changeName() {
+  inputChangeName.classList.toggle("hide");
+  confirmChangeName.classList.toggle("hide");
+
+  confirmChangeName.addEventListener("click", (e) => {
+      if (inputChangeName.value == "") {
+          alert("O campo precisa estar preenchido!");
+      } else {
+
+          userName.textContent = inputChangeName.value;
+          
+          inputChangeName.classList.add("hide");
+          confirmChangeName.classList.add("hide");
+          toggleMenu();
+
+      }
+      
+  })
+}
+
+btnTrocarNome.addEventListener("click", (e) => {
+    e.preventDefault();
+    changeName();
+})
+
+inputChangeName.addEventListener("keyup", (e) => {
+
+  if (e.code === "Enter") {
+    userName.textContent = inputChangeName.value;
+    changeName();
+  }
 
 });
 

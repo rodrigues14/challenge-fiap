@@ -16,7 +16,7 @@
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }
 
 body {
@@ -67,11 +67,12 @@ body.dark {
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
-    transition: all .3s ease-in-out;
 }
 
-#add-name form button:hover {
+#add-name form button:hover, 
+#confirm-name-change:hover {
     background-color: #0099ff;
+    transition: all .3s ease-in-out;
 }
 
 header {
@@ -122,13 +123,23 @@ header {
     margin-bottom: 10px;
 }
 
-
-
-#trocar-name {
+#change-name {
     padding: 5px;
     width: 120px;
     margin: 0 10px 10px;
     border-radius: 5px;
+    outline: #0099ff;
+    border: 1px solid #0099ff;
+}
+
+#confirm-name-change {
+    display: block;
+    width: 90px;
+    padding: 4px;
+    margin: 5px auto 10px;
+    background-color: #18a2ff;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 #box-menu a {
