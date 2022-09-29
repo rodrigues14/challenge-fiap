@@ -1,4 +1,5 @@
-// getting username
+const main = document.querySelector("main");
+// user registration
 const btnConfirmar = document.querySelector("#btn-confirm");
 const userName = document.querySelector("#name");
 
@@ -14,12 +15,11 @@ function returnMsgErro(value) {
 
 }
 
-function addFirstName() {
+function addUserData() {
   const inputNome = document.querySelector("#input-name");
   const inputEmail = document.querySelector("#input-email");
   const inputCarro = document.querySelector("#input-carro");
   const header = document.querySelector("header");
-  const main = document.querySelector("main");
   const divAddName = document.querySelector("#registration");
 
   if (inputNome.value == "" || inputEmail.value == '' || inputCarro.value == '') {
@@ -38,49 +38,29 @@ function addFirstName() {
 btnConfirmar.addEventListener("click", (e) => {
 
   e.preventDefault();
-  addFirstName();
+  addUserData();
 
 });
 
 
-// change name
-const inputChangeName = document.querySelector("#change-name");
-const btnTrocarNome = document.querySelector("#btn-trocar-name");
-const confirmChangeName = document.querySelector("#confirm-name-change");
+// change user data
+const config = document.querySelector("#config");
+const btnConfig = document.querySelector("#btn-config");
+const btnVoltar = document.querySelector("#btn-voltar");
 
-function changeName() {
-  inputChangeName.classList.toggle("hide");
-  confirmChangeName.classList.toggle("hide");
+btnConfig.addEventListener('click', (e) => {
 
-  confirmChangeName.addEventListener("click", (e) => {
-    if (inputChangeName.value == "") {
-      returnMsgErro("Este campo precisa estar preenchido!");
-    } else {
-
-      userName.textContent = inputChangeName.value;
-
-      inputChangeName.classList.add("hide");
-      confirmChangeName.classList.add("hide");
-      toggleMenu();
-
-    }
-
-  })
-}
-
-btnTrocarNome.addEventListener("click", (e) => {
   e.preventDefault();
-  changeName();
+  config.classList.remove("hide");
+  main.classList.add("hide");
+  toggleMenu();
+
+  btnVoltar.addEventListener('click', (e) => {
+    e.preventDefault();
+    config.classList.add("hide");
+  main.classList.remove("hide");
+  })
 })
-
-inputChangeName.addEventListener("keyup", (e) => {
-
-  if (e.code === "Enter") {
-    userName.textContent = inputChangeName.value;
-    changeName();
-  }
-
-});
 
 
 // activating the mobile btn

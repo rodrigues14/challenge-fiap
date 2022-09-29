@@ -137,25 +137,6 @@ header {
   margin-bottom: 10px;
 }
 
-#change-name {
-  padding: 5px;
-  width: 120px;
-  margin: -15px 10px 5px;
-  border-radius: 5px;
-  outline: #0099ff;
-  border: 1px solid #0099ff;
-}
-
-#confirm-name-change {
-  display: block;
-  width: 90px;
-  padding: 4px;
-  margin: 5px auto 10px;
-  background-color: #18a2ff;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
 #box-menu a {
   color: black;
   text-decoration: none;
@@ -294,18 +275,78 @@ img {
   animation: fromRight .7s .5s backwards;
 }
 
+#config {
+  max-width: 400px;
+  margin-inline: auto;
+  color: var(--text-color);
+  padding: 30px 10px 10px;
+}
+
+#config-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+#btn-voltar {
+  padding: 8px;
+  background: transparent;  
+  cursor: pointer;
+}
+
+.fa-angle-left:before {
+  color: var(--text-color);
+  font-size: 30px;
+}
+
+#config h3 {
+  font-size: 30px;
+  color: #047ac9;
+}
+
+#config h4 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#config p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 18px;
+  word-spacing: 13px;
+}
+
+#config p button {
+  padding: 8px;
+  cursor: pointer;
+  background-color: #0099ff;
+  transition: all .3s ease-in-out;
+  border-radius: 50%;
+}
+
+#config p button:hover {
+  background-color: #047ac9;
+}
+
+#config button i {
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Keyframes */
 @keyframes fromRight {
   from {
     opacity: 0;
     transform: translateX(200px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
-
 
 @media screen and (max-width: 550px) {
   header {
@@ -353,3 +394,4 @@ img {
     width: 40px;
   }
 }
+

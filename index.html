@@ -13,10 +13,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
   <!-- JS -->
   <script src="./js/script.js" defer></script>
+  <!-- Font awesome -->
+  <script src="https://kit.fontawesome.com/464370779f.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <section id="registration">
+  <section id="registration" class="">
     <h2>Bem vindo(a)! <br> Para iniciar, preencha os seus dados!</h2>
     <form>
       <label for="input-name">Nome:</label>
@@ -35,10 +37,10 @@
       <nav id="nav">
         <ul>
           <li>
-            <a id="btn-trocar-name" class="link" href="index.html">Trocar nome</a>
+            <a id="btn-config" class="link" href="index.html">Configurações</a>
           </li>
-          <input id="change-name" type="text" class="hide" placeholder="Novo nome">
-          <button id="confirm-name-change" class="hide">Confirmar</button>
+          <!-- <input id="change-name" type="text" class="hide" placeholder="Novo nome">
+          <button id="confirm-name-change" class="hide">Confirmar</button> -->
           <li>
             <a class="link" href="index.html">Sobre</a>
           </li>
@@ -122,10 +124,21 @@
 
   </main>
 
+  <div id="config" class="hide">
+    <div id="config-line">
+      <button id="btn-voltar"><i class="fa-solid fa-angle-left"></i></button>
+      <h3>Configurações</h3>
+    </div>
+    <h4>Configurações de usuário</h4>
+    
+    <p>Nome: Lucas<button><i class="fa-solid fa-pen"></i></button></p>
+    <p>Email: lucas@gmail.com<button><i class="fa-solid fa-pen"></i></button></p>
+    <p>Carro: Fox<button><i class="fa-solid fa-pen"></i></button></p>
+  </div>
+
   <div id="feedback" class="hide">
     <p>Este campo precisa ser preenchido!</p>
   </div>
 
-  <script src="https://kit.fontawesome.com/464370779f.js" crossorigin="anonymous"></script>
 </body>
 </html>
