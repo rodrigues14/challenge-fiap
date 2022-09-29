@@ -16,12 +16,14 @@ function returnMsgErro(value) {
 
 function addFirstName() {
   const inputNome = document.querySelector("#input-name");
+  const inputEmail = document.querySelector("#input-email");
+  const inputCarro = document.querySelector("#input-carro");
   const header = document.querySelector("header");
   const main = document.querySelector("main");
-  const divAddName = document.querySelector("#add-name");
+  const divAddName = document.querySelector("#registration");
 
-  if (inputNome.value == "") {
-    returnMsgErro("Digite seu nome para começar!");
+  if (inputNome.value == "" || inputEmail.value == '' || inputCarro.value == '') {
+    returnMsgErro("Todos os campos precisam ser preenchidos!");
   } else {
 
     header.classList.remove("hide");
@@ -174,7 +176,7 @@ function activeBtn() {
 
       setTimeout(() => {
         message.classList.add('hide');
-      }, 4500);
+      }, 3500);
     });
   }
 }
