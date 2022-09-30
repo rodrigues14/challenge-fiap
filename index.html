@@ -22,12 +22,12 @@
     <h2>Bem vindo(a)! <br> Para iniciar, preencha os seus dados!</h2>
     <form>
       <label for="input-name">Nome:</label>
-      <input type="text" id="input-name">
+      <input type="text" id="input-name" class="input-user">
       <label for="input-email">Email:</label>
-      <input type="email" id="input-email">
+      <input type="email" id="input-email" class="input-user">
       <label for="input-carro">Carro:</label>
-      <input type="text" id="input-carro">
-      <button id="btn-confirm">Confirmar</button>
+      <input type="text" id="input-carro" class="input-user">
+      <button id="btn-confirm" class="btn">Confirmar</button>
     </form>
   </section>
   
@@ -39,8 +39,6 @@
           <li>
             <a id="btn-config" class="link" href="index.html">Configurações</a>
           </li>
-          <!-- <input id="change-name" type="text" class="hide" placeholder="Novo nome">
-          <button id="confirm-name-change" class="hide">Confirmar</button> -->
           <li>
             <a class="link" href="index.html">Sobre</a>
           </li>
@@ -131,9 +129,22 @@
     </div>
     <h4>Configurações de usuário</h4>
     
-    <p>Nome: Lucas<button><i class="fa-solid fa-pen"></i></button></p>
-    <p>Email: lucas@gmail.com<button><i class="fa-solid fa-pen"></i></button></p>
-    <p>Carro: Fox<button><i class="fa-solid fa-pen"></i></button></p>
+    <p>
+      Nome: <span id="nameCurrent"></span>
+      <input type="text" id="input-att-name" class="input-user hide">
+      <button id="editName"><i class="fa-solid fa-pen"></i></button>
+    </p>
+    <p>
+      Email: <span id="emailCurrent"></span> 
+      <input type="email" id="input-att-email" class="input-user hide">
+      <button id="editEmail"><i class="fa-solid fa-pen"></i></button>
+    </p>
+    <p>
+      Carro: <span id="carroCurrent"></span>
+      <input type="text" id="inpu-att-carro" class="input-user hide">
+      <button id="editCarro"><i class="fa-solid fa-pen"></i></button>
+    </p>
+    <button id="btn-alterar" class="btn hide">Alterar</button>
   </div>
 
   <div id="feedback" class="hide">

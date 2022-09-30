@@ -62,7 +62,7 @@ body.dark {
   margin: 20px 0 5px;
 }
 
-#registration form input {
+.input-user {
   outline: none;
   padding: 8px;
   background-color: #c0ddf1;
@@ -71,7 +71,8 @@ body.dark {
   width: 100%;
 }
 
-#registration form button {
+.btn {
+  display: block;
   background-color: #18a2ff;
   margin-top: 20px;
   padding: 10px;
@@ -316,7 +317,7 @@ img {
   align-items: center;
   padding: 8px 0;
   font-size: 18px;
-  word-spacing: 13px;
+  border-bottom: 1px solid rgba(79, 79, 79, 0.4)
 }
 
 #config p button {
@@ -335,6 +336,18 @@ img {
   font-size: 16px;
   color: #fff;
 }
+
+#config p input {
+  max-width: 200px;
+  padding: 4px;
+  margin: 0 5px;
+}
+
+#config p span {
+  flex: 1;
+  margin-left: 15px;
+}
+
 
 /* Keyframes */
 @keyframes fromRight {

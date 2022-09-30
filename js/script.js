@@ -1,7 +1,12 @@
 const main = document.querySelector("main");
+
 // user registration
 const btnConfirmar = document.querySelector("#btn-confirm");
 const userName = document.querySelector("#name");
+
+const inputNome = document.querySelector("#input-name");
+const inputEmail = document.querySelector("#input-email");
+const inputCarro = document.querySelector("#input-carro");
 
 function returnMsgErro(value) {
 
@@ -16,9 +21,6 @@ function returnMsgErro(value) {
 }
 
 function addUserData() {
-  const inputNome = document.querySelector("#input-name");
-  const inputEmail = document.querySelector("#input-email");
-  const inputCarro = document.querySelector("#input-carro");
   const header = document.querySelector("header");
   const divAddName = document.querySelector("#registration");
 
@@ -60,7 +62,72 @@ btnConfig.addEventListener('click', (e) => {
     config.classList.add("hide");
   main.classList.remove("hide");
   })
+
+  nameCurrent.textContent = inputNome.value;
+  emailCurrent.textContent = inputEmail.value;
+  carroCurrent.textContent = inputCarro.value;
 })
+
+
+const btnEditName = document.querySelector('#editName');
+const btnEditEmail = document.querySelector('#editEmail');
+const btnEditCarro = document.querySelector('#editCarro');
+
+const inputAttNome = document.querySelector('#input-att-name');
+const inputAttEmail = document.querySelector('#input-att-email');
+const inpuAttCarro = document.querySelector('#inpu-att-carro');
+
+let nameCurrent = document.querySelector('#nameCurrent');
+let emailCurrent = document.querySelector('#emailCurrent');
+let carroCurrent = document.querySelector('#carroCurrent');
+
+
+function editData(btnEdit, inputEdit, current) {
+
+  btnEdit.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    inputEdit.classList.toggle('hide');
+    current.classList.toggle('hide');
+
+    inputEdit.value = current.textContent;
+    inputEdit.focus();
+
+    btnAlterar.classList.remove('hide');
+
+  })
+
+}
+
+editData(btnEditName, inputAttNome, nameCurrent);
+editData(btnEditEmail, inputAttEmail, emailCurrent);
+editData(btnEditCarro, inpuAttCarro, carroCurrent);
+
+const btnAlterar = document.querySelector('#btn-alterar');
+
+function newData (input, current) {
+
+  btnAlterar.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (input.value == "") {
+      returnMsgErro("Não pode alterar o valor para vazio!");
+      input.focus();
+    } else {
+
+      current.textContent = input.value;
+
+      input.classList.add('hide');
+      current.classList.remove('hide');
+    }
+  })
+
+}
+
+
+newData(inputAttNome, nameCurrent);
+newData(inputAttEmail, emailCurrent);
+newData(inpuAttCarro, carroCurrent);
 
 
 // activating the mobile btn
