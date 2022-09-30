@@ -194,18 +194,13 @@ setInterval(dateAndHours);
 // activating the main btns
 function activeBtn() {
 
-  let btnOptions = document.querySelectorAll('.btn-action');
+  let btnOptions = document.querySelectorAll('.take-action');
   let message = document.querySelector('#msg');
 
   const text = [
     "Portão aberto com sucesso!",
     "Luz Acessa com sucesso!",
     "Câmeras de segurança ativadas!",
-    `Detalhes da viagem: <br>
-        18km percorrido <br>
-        3L de combustivel <br>
-        Destino: casa <br>
-        Tempo: 15 min`,
     "Porta destrancada com sucesso",
     "Texto aleátorio",
   ]
@@ -219,7 +214,7 @@ function activeBtn() {
         message.innerHTML = text[i];
         message.classList.remove('hide');
 
-      }, 500);
+      }, 300);
 
       setTimeout(() => {
         message.classList.add('hide');
@@ -227,7 +222,24 @@ function activeBtn() {
     });
   }
 }
+
 activeBtn();
+
+const actionDetails = document.querySelector('.action-details');
+const closeDetails = document.querySelector('#close-details');
+const campoBtnDetails = document.querySelector('#campo-btn-details');
+
+actionDetails.addEventListener('click', () => {
+  setTimeout(() => {
+    campoBtnDetails.classList.toggle('hide');
+  }, 300);
+
+});
+
+closeDetails.addEventListener('click', () => {
+  campoBtnDetails.classList.add('hide');
+
+});
 
 
 // theme change

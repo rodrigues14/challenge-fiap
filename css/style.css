@@ -112,7 +112,7 @@ header {
 }
 
 #nav {
-  width: 190px;
+  width: 0px;
   position: absolute;
   background-color: var(--btn-hover);
   border-radius: 15px;
@@ -120,14 +120,15 @@ header {
   padding: 10px 15px 20px;
   display: block;
   height: 0;
-  transition: .3s;
+  transition: .25s;
   visibility: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 #nav.active {
   visibility: visible;
-  height: auto;
+  height: 190px;
+  width: 180px;
 }
 
 #box-menu ul {
@@ -249,20 +250,55 @@ img {
   font-size: 50px;
 }
 
-#msg {
+.campos-msgs {
   position: absolute;
   margin-inline: auto;
-  text-align: center;
   left: 0;
   right: 0;
   top: 80px;
   width: 500px;
-  font-size: 30px;
-  background-color: #3CB371;
-  color: #fff;
-  padding: 20px;
   border-radius: 15px;
+  padding: 20px;
+  background-color: #3CB371;
+  color: #e5dddd;
 }
+
+#msg {
+  text-align: center;
+  font-size: 30px;
+}
+
+#header-details {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#campo-btn-details h5 {
+  font-size: 25px;
+  text-align: center;
+  flex: 1;
+}
+
+#campo-btn-details li {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+#campo-btn-details li:last-child {
+  word-spacing: 3px;
+  margin-left: 2px;
+}
+
+#close-details {
+  color: #fff;
+  background: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+
+
 
 #feedback {
   font-size: 20px;
@@ -367,10 +403,15 @@ img {
     height: 34px;
   }
 
+  h1 {
+    margin-top: 20px;
+  }
+
   #date-hours {
-    flex-direction: column;
-    gap: 0;
+    gap: 20px;
     align-items: flex-end;
+    font-size: 18px;
+    flex-wrap: wrap;
   }
 
   .btn-action {

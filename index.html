@@ -18,7 +18,7 @@
 </head>
 <body>
 
-  <section id="registration" class="">
+  <section id="registration" class="hide">
     <h2>Bem vindo(a)! <br> Para iniciar, preencha os seus dados!</h2>
     <form>
       <label for="input-name">Nome:</label>
@@ -31,7 +31,7 @@
     </form>
   </section>
   
-  <header class="hide">
+  <header class="">
     <div id="box-menu">
       <button id="btn-menu"><i class="icon-menu fa-solid fa-bars"></i></button>
       <nav id="nav">
@@ -59,49 +59,49 @@
     </div>
   </header>
   
-  <main class="hide">
+  <main class="">
     <h1>Olá <span id="name"></span>, <span id="greeting"></span></h1>
     <section id="container">
       
       <div id="btn-box">
-        <button id="openGate" class="btn-action">
+        <button id="openGate" class="btn-action take-action">
           <img src="./img/gate.svg" alt="Icon de um portão"><br>
           Abrir portão
         </button>
       </div>
   
       <div id="btn-box">
-        <button class="btn-action">
+        <button class="btn-action take-action">
           <img src="./img/lamp.png" alt="Icon de uma lâmpada"><br>
           Acender a luz da garagem
         </button>
       </div>
   
       <div id="btn-box">
-        <button class="btn-action">
+        <button class="btn-action take-action">
           <img src="./img/camera.svg" alt="Icon de uma câmera"><br>
           Ativar câmeras de segurança
         </button>
       </div>
-      
-      <div id="btn-box">
-        <button class="btn-action">
-          <img src="./img/car.svg" alt="Icon de um carro"><br>
-          Detalhes da viagem
-        </button>
-      </div>
   
       <div id="btn-box">
-        <button class="btn-action">
+        <button class="btn-action take-action">
           <img src="img/door.svg" alt=""><br>
           Destrancar a porta
         </button>
       </div>
   
       <div id="btn-box">
-        <button class="btn-action">
+        <button class="btn-action take-action">
           <img src="img/lamp.png" alt=""><br>
           Lorem ipsum dolor
+        </button>
+      </div>
+
+      <div id="btn-box">
+        <button class="btn-action action-details">
+          <img src="./img/car.svg" alt="Icon de um carro"><br>
+          Detalhes da viagem
         </button>
       </div>
       
@@ -118,7 +118,33 @@
       </div>
     </section>
 
-    <span class="hide" id="msg" >Portão aberto com sucesso!</span>
+    <span class="campos-msgs hide" id="msg" >Portão aberto com sucesso!</span>
+
+    <div id="campo-btn-details" class="campos-msgs hide">
+      <div id="header-details">
+        <h5>Detalhes da Viagem</h5>
+        <button id="close-details"><i class="fa-solid fa-xmark fa-2x"></i></button>
+      </div>
+      <ul>
+        <li>
+          <i class="fa-solid fa-route"></i>
+          Distância percorrida: <span>10</span>Km/h
+        </li>
+        <li>
+          <i class="fa-solid fa-gas-pump"></i>
+          Combustível gasto: <span>2</span>L
+        </li>
+        
+        <li>
+          <i class="fa-solid fa-clock"></i>
+          Tempo: <span>50</span>min
+        </li>
+        <li>
+          <i class="fa-solid fa-location-dot"></i>
+          Destino: <span>Casa</span>
+        </li>
+      </ul>
+    </div>
 
   </main>
 
