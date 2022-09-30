@@ -287,8 +287,11 @@ img {
 }
 
 #campo-btn-details li:last-child {
-  word-spacing: 3px;
-  margin-left: 2px;
+  margin-left: 3px;
+}
+
+#campo-btn-details .fa-solid {
+  margin-right: 10px;
 }
 
 #close-details {
@@ -297,8 +300,6 @@ img {
   padding: 5px;
   cursor: pointer;
 }
-
-
 
 #feedback {
   font-size: 20px;
@@ -384,7 +385,6 @@ img {
   margin-left: 15px;
 }
 
-
 /* Keyframes */
 @keyframes fromRight {
   from {
@@ -448,4 +448,3 @@ img {
     width: 40px;
   }
 }
-
