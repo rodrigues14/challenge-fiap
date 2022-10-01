@@ -47,11 +47,12 @@ body.dark {
 #registration h2 {
   color: var(--text-color);
   text-align: center;
-  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
 }
 
 #registration form {  
-  width: 95%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -432,7 +433,8 @@ img {
     left: 30px;
   }
 
-  #msg {
+  #msg,
+  #campo-btn-details {
     width: 90%;
   }
 }
