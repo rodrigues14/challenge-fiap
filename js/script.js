@@ -7,6 +7,7 @@ const userName = document.querySelector("#name");
 const inputNome = document.querySelector("#input-name");
 const inputEmail = document.querySelector("#input-email");
 const inputCarro = document.querySelector("#input-carro");
+const inputSenha = document.querySelector("#input-senha");
 
 function returnMsgErro(value) {
 
@@ -24,7 +25,7 @@ function addUserData() {
   const header = document.querySelector("header");
   const divAddName = document.querySelector("#registration");
 
-  if (inputNome.value == "" || inputEmail.value == '' || inputCarro.value == '') {
+  if (inputNome.value == "" || inputEmail.value == '' || inputCarro.value == '' || inputSenha.value == '') {
     returnMsgErro("Todos os campos precisam ser preenchidos!");
   } else {
 
@@ -66,20 +67,24 @@ btnConfig.addEventListener('click', (e) => {
   nameCurrent.textContent = inputNome.value;
   emailCurrent.textContent = inputEmail.value;
   carroCurrent.textContent = inputCarro.value;
-})
+  senhaCurrent.textContent = inputSenha.value;
+});
 
 
 const btnEditName = document.querySelector('#editName');
 const btnEditEmail = document.querySelector('#editEmail');
 const btnEditCarro = document.querySelector('#editCarro');
+const btnEditSenha = document.querySelector('#editSenha');
 
 const inputAttNome = document.querySelector('#input-att-name');
 const inputAttEmail = document.querySelector('#input-att-email');
-const inpuAttCarro = document.querySelector('#inpu-att-carro');
+const inputAttCarro = document.querySelector('#input-att-carro');
+const inputAttSenha = document.querySelector('#input-att-senha');
 
 let nameCurrent = document.querySelector('#nameCurrent');
 let emailCurrent = document.querySelector('#emailCurrent');
 let carroCurrent = document.querySelector('#carroCurrent');
+let senhaCurrent = document.querySelector('#senhaCurrent');
 
 
 function editData(btnEdit, inputEdit, current) {
@@ -101,7 +106,8 @@ function editData(btnEdit, inputEdit, current) {
 
 editData(btnEditName, inputAttNome, nameCurrent);
 editData(btnEditEmail, inputAttEmail, emailCurrent);
-editData(btnEditCarro, inpuAttCarro, carroCurrent);
+editData(btnEditCarro, inputAttCarro, carroCurrent);
+editData(btnEditSenha, inputAttSenha, senhaCurrent);
 
 const btnAlterar = document.querySelector('#btn-alterar');
 
@@ -127,7 +133,8 @@ function newData (input, current) {
 
 newData(inputAttNome, nameCurrent);
 newData(inputAttEmail, emailCurrent);
-newData(inpuAttCarro, carroCurrent);
+newData(inputAttCarro, carroCurrent);
+newData(inputAttSenha, senhaCurrent);
 
 
 // activating the mobile btn
