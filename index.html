@@ -166,13 +166,19 @@
         <h4>Nova funcionlidade</h4>
         <form>
           <label for="name-functionality">Nome da Funcionalidade</label>
-          <input type="text" name="name-functionality" id="name-functionality" class="input-user">
+          <input type="text" name="name-functionality" id="name-functionality" class="input-user" placeholder="Ex: Ligar a TV">
 
           <label for="phrase-functionality">Frase para a ação realizada!</label>
-          <input type="text" name="phrase-functionality" id="phrase-functionality" class="input-user">
+          <input type="text" name="phrase-functionality" id="phrase-functionality" class="input-user" placeholder="Ex: TV ligada com sucesso!">
 
-          <label for="url-img">Url da Imagem</label>
-          <input type="url" name="url-img" id="url-img" class="input-user">
+          <label for="nome-objeto">Qual o dispositivo que será automatizado?</label>
+          <input type="text" name="nome-objeto" id="nome-objeto" class="input-user" placeholder="Ex: Televisão">
+
+          <label for="cod-objeto">Qual o código do dispositivo?</label>
+          <input type="number" name="cod-objeto" id="cod-objeto" class="input-user" placeholder="Ex: 123456">
+
+          <label for="url-img">Url da Imagem (Opcional)</label>
+          <input type="url" name="url-img" id="url-img" class="input-user" placeholder="Uma imagem será adicionada automaticamente">
 
           <div id="btns-modal">
             <button id="btn-cancel" class="btn">Cancelar</button>
