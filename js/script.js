@@ -166,3 +166,17 @@ function retornRandomValue() {
 
 }
 retornRandomValue();
+
+
+// other settings
+const optionShow = document.querySelector("#showOptions");
+const hideOptions = document.querySelector("#hideOptions");
+
+const gasAndHouse = document.querySelector('#gasoline-house');
+
+optionShow.addEventListener('click', () => {
+  gasAndHouse.classList.remove('hide');
+})
+hideOptions.addEventListener('click', () => {
+  gasAndHouse.classList.add('hide');
+})

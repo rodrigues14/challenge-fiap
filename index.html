@@ -150,7 +150,7 @@
 
   <div id="config" class="hide">
     <div id="config-line">
-      <button id="btn-voltar"><i class="fa-solid fa-angle-left"></i></button>
+      <button id="btn-voltar"><i class="fa-solid fa-arrow-left"></i></i></button>
       <h3>Configurações</h3>
     </div>
     <h4>Configurações de usuário</h4>
@@ -178,14 +178,15 @@
 
     <button id="btn-alterar" class="btn hide">Alterar</button>
 
+    <h4 id="other-settings">Outras configurações</h4>
     <details>
       <summary>
         <i class="fa-solid fa-caret-right"></i>
         Deseja mostrar a quantidade de gasolina e a distancia até a sua casa?
       </summary>
-      <input type="radio" name="showOptions" id="showOptions">
+      <input type="radio" name="option" id="showOptions" checked>
       <label for="showOptions">Mostrar</label> <br>
-      <input type="radio" name="hideOptions" id="hideOptions">
+      <input type="radio" name="option" id="hideOptions">
       <label for="hideOptions">Ocultar</label>
     </details>
   </div>

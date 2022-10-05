@@ -341,9 +341,9 @@ img {
   cursor: pointer;
 }
 
-.fa-angle-left:before {
+.fa-arrow-left:before {
   color: var(--text-color);
-  font-size: 30px;
+  font-size: 25px;
 }
 
 #config h3 {
@@ -391,6 +391,27 @@ img {
 #config p span {
   flex: 1;
   margin-left: 15px;
+}
+
+#other-settings {
+  margin-top: 50px;
+}
+
+details, input[type="radio"],
+details label {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+details summary i {
+  margin-right: 5px;
+  color: var(--text-color);
+  transition: .2s;
+  transform: rotate(0deg);
+}
+
+details[open] summary i {
+  transform: rotate(90deg);
 }
 
 /* Keyframes */
