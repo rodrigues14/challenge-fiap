@@ -73,18 +73,18 @@ setInterval(dateAndHours);
 
 
 // activating the main btns
+let text = [
+  "Portão aberto com sucesso!",
+  "Luz acessa com sucesso!",
+  "Câmeras de segurança ativadas!",
+  "Porta destrancada com sucesso",
+  "Texto aleátorio",
+];
+
 function activeBtn() {
 
   let btnOptions = document.querySelectorAll('.take-action');
   let message = document.querySelector('#msg');
-
-  const text = [
-    "Portão aberto com sucesso!",
-    "Luz Acessa com sucesso!",
-    "Câmeras de segurança ativadas!",
-    "Porta destrancada com sucesso",
-    "Texto aleátorio",
-  ]
 
   for (let i = 0; i < btnOptions.length; i++) {
 
@@ -180,3 +180,62 @@ optionShow.addEventListener('click', () => {
 hideOptions.addEventListener('click', () => {
   gasAndHouse.classList.add('hide');
 })
+
+
+// modal to create a functionality
+const openModal = document.querySelector('#funcionalidades a');
+const modalFuncionalidade = document.querySelector('#modal-funcionalidades');
+
+const btnCancel = document.querySelector('#btn-cancel');
+const btnAdd = document.querySelector('#btn-add');
+
+openModal.addEventListener('click', () => {
+  modalFuncionalidade.classList.remove('hide');
+});
+
+btnCancel.addEventListener('click', (e) => {
+  e.preventDefault();
+  modalFuncionalidade.classList.add('hide')
+});
+
+btnAdd.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const nomeFunci = document.querySelector('#name-functionality');
+  const fraseFunci = document.querySelector('#phrase-functionality');
+  const urlFunci = document.querySelector('#url-img');
+
+  if (nomeFunci.value == '' || fraseFunci.value == '') {
+    returnMsgErro('O nome e a frase são obrigatórios!')
+  } else {
+    // criar o elemento
+
+    const container = document.querySelector('#container');
+    container.id = "container";
+
+    const div = document.createElement('div');
+    div.id = 'btn-box';
+
+    const btn = document.createElement('button');
+    btn.classList.add('btn-action');
+    btn.classList.add('take-action');
+    div.appendChild(btn);
+
+    if (urlFunci.value == '') {
+      urlFunci.value = "./img/ia.svg";
+    }
+
+    btn.innerHTML = `<img src="${urlFunci.value}"><br> ${nomeFunci.value}`;
+
+    container.appendChild(div);
+
+    modalFuncionalidade.classList.add('hide');
+
+    text.push(fraseFunci.value);
+    activeBtn();
+
+    nomeFunci.value = '';
+    fraseFunci.value = '';
+    urlFunci.value = '';
+  }
+});

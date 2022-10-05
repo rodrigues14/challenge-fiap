@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,13 +11,15 @@
   <!-- Google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+    rel="stylesheet">
   <!-- JS -->
   <script src="./js/script.js" defer></script>
   <script src="./js/registration.js" defer></script>
   <!-- Font awesome -->
   <script src="https://kit.fontawesome.com/464370779f.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
   <section id="registration" class="">
@@ -35,7 +38,7 @@
       <button id="btn-confirm" class="btn">Confirmar</button>
     </form>
   </section>
-  
+
   <header class="hide">
     <div id="box-menu">
       <button id="btn-menu"><i class="icon-menu fa-solid fa-bars"></i></button>
@@ -49,7 +52,7 @@
           </li>
         </ul>
         <input type="checkbox" class="checkbox" id="chk">
-        
+
         <label class="label" for="chk">
           <img class="icon-theme" src="./img/moon.svg" alt="">
           <img class="icon-theme" src="./img/sun.svg" alt="">
@@ -57,45 +60,45 @@
         </label>
       </nav>
     </div>
-    
+
     <div id="date-hours">
       <p id="date"></p>
       <p id="hours"></p>
     </div>
   </header>
-  
+
   <main class="hide">
     <h1>Olá <span id="name"></span>, <span id="greeting"></span></h1>
     <section id="container">
-      
+
       <div id="btn-box">
         <button id="openGate" class="btn-action take-action">
           <img src="./img/gate.svg" alt="Icon de um portão"><br>
           Abrir portão
         </button>
       </div>
-  
+
       <div id="btn-box">
         <button class="btn-action take-action">
           <img src="./img/lamp.png" alt="Icon de uma lâmpada"><br>
           Acender a luz da garagem
         </button>
       </div>
-  
+
       <div id="btn-box">
         <button class="btn-action take-action">
           <img src="./img/camera.svg" alt="Icon de uma câmera"><br>
           Ativar câmeras de segurança
         </button>
       </div>
-  
+
       <div id="btn-box">
         <button class="btn-action take-action">
           <img src="img/door.svg" alt=""><br>
           Destrancar a porta
         </button>
       </div>
-  
+
       <div id="btn-box">
         <button class="btn-action take-action">
           <img src="img/lamp.png" alt=""><br>
@@ -109,7 +112,7 @@
           Detalhes da viagem
         </button>
       </div>
-      
+
     </section>
 
     <section id="gasoline-house">
@@ -123,7 +126,7 @@
       </div>
     </section>
 
-    <span class="campos-msgs hide" id="msg" >Portão aberto com sucesso!</span>
+    <span class="campos-msgs hide" id="msg">Portão aberto com sucesso!</span>
 
     <div id="campo-btn-details" class="campos-msgs hide">
       <div id="header-details">
@@ -132,11 +135,12 @@
       </div>
       <ul>
         <li>
-          <i class="fa-solid fa-route"></i>Distância percorrida: 3Km/h</li>
+          <i class="fa-solid fa-route"></i>Distância percorrida: 3Km/h
+        </li>
         <li>
           <i class="fa-solid fa-gas-pump"></i>Combustível gasto: 2L
         </li>
-        
+
         <li>
           <i class="fa-solid fa-clock"></i>Tempo: 30min
         </li>
@@ -153,30 +157,60 @@
       <button id="btn-voltar"><i class="fa-solid fa-arrow-left"></i></i></button>
       <h3>Configurações</h3>
     </div>
-    <h4>Configurações de usuário</h4>
-    
-    <p>
-      Nome: <span id="nameCurrent"></span>
-      <input type="text" id="input-att-name" class="input-user hide">
-      <button id="editName"><i class="fa-solid fa-pen"></i></button>
-    </p>
-    <p>
-      Carro: <span id="carroCurrent"></span>
-      <input type="text" id="input-att-carro" class="input-user hide">
-      <button id="editCarro"><i class="fa-solid fa-pen"></i></button>
-    </p>
-    <p>
-      Email: <span id="emailCurrent"></span> 
-      <input type="email" id="input-att-email" class="input-user hide">
-      <button id="editEmail"><i class="fa-solid fa-pen"></i></button>
-    </p>
-    <p>
-      Senha: <span id="senhaCurrent"></span>
-      <input type="password" id="input-att-senha" class="input-user hide">
-      <button id="editSenha"><i class="fa-solid fa-pen"></i></button>
-    </p>
 
-    <button id="btn-alterar" class="btn hide">Alterar</button>
+    <div id="funcionalidades">
+      <h4>Funcionalidades</h4>
+      <a>Adicionar nova funcionalidade</a>
+
+      <div id="modal-funcionalidades" class="campos-msgs hide">
+        <h4>Nova funcionlidade</h4>
+        <form>
+          <label for="name-functionality">Nome da Funcionalidade</label>
+          <input type="text" name="name-functionality" id="name-functionality" class="input-user">
+
+          <label for="phrase-functionality">Frase para a ação realizada!</label>
+          <input type="text" name="phrase-functionality" id="phrase-functionality" class="input-user">
+
+          <label for="url-img">Url da Imagem</label>
+          <input type="url" name="url-img" id="url-img" class="input-user">
+
+          <div id="btns-modal">
+            <button id="btn-cancel" class="btn">Cancelar</button>
+            <button id="btn-add" class="btn">Adicionar</button>
+          </div>
+          
+        </form>
+
+      </div>
+
+    </div>
+
+    <div id="config-user">
+      <h4>Configurações de usuário</h4>
+
+      <p>
+        Nome: <span id="nameCurrent"></span>
+        <input type="text" id="input-att-name" class="input-user hide">
+        <button id="editName"><i class="fa-solid fa-pen"></i></button>
+      </p>
+      <p>
+        Carro: <span id="carroCurrent"></span>
+        <input type="text" id="input-att-carro" class="input-user hide">
+        <button id="editCarro"><i class="fa-solid fa-pen"></i></button>
+      </p>
+      <p>
+        Email: <span id="emailCurrent"></span>
+        <input type="email" id="input-att-email" class="input-user hide">
+        <button id="editEmail"><i class="fa-solid fa-pen"></i></button>
+      </p>
+      <p>
+        Senha: <span id="senhaCurrent"></span>
+        <input type="password" id="input-att-senha" class="input-user hide">
+        <button id="editSenha"><i class="fa-solid fa-pen"></i></button>
+      </p>
+
+      <button id="btn-alterar" class="btn hide">Alterar</button>
+    </div>
 
     <h4 id="other-settings">Outras configurações</h4>
     <details>
@@ -196,4 +230,5 @@
   </div>
 
 </body>
+
 </html>

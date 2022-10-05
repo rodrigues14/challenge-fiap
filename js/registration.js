@@ -95,6 +95,7 @@ function newData(input, current) {
 
     if (input.value == "") {
       returnMsgErro("Não pode alterar o valor para vazio!");
+      btnAlterar.classList.remove('hide');
       input.focus();
     } else {
 
@@ -105,6 +106,8 @@ function newData(input, current) {
 
       // att the name in h1
       userName.textContent = inputAttNome.value;
+      // hide btn-alterar
+      btnAlterar.classList.add('hide');
     }
   })
 

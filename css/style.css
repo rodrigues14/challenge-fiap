@@ -264,7 +264,7 @@ img {
   left: 0;
   right: 0;
   top: 80px;
-  width: 500px;
+  max-width: 500px;
   border-radius: 15px;
   padding: 20px;
   background-color: #3CB371;
@@ -356,7 +356,51 @@ img {
   margin-bottom: 20px;
 }
 
-#config p {
+#funcionalidades {
+  margin-bottom: 50px;
+}
+
+#funcionalidades a {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#modal-funcionalidades {
+  color: #FFFAFA;
+  background-color: #3b3b3b;
+}
+
+#modal-funcionalidades h4 {
+  text-align: center;
+  font-size: 25px;
+}
+
+#modal-funcionalidades form {
+  display: flex;
+  flex-direction: column;
+}
+
+#modal-funcionalidades form label {
+  font-size: 18px;
+  margin: 15px 0 5px;
+}
+
+#btns-modal {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 15px;
+}
+
+#btns-modal button {
+  margin: 25px 0 0;
+}
+
+#btns-modal #btn-cancel {
+  background-color: #ff4040;
+} 
+
+#config-user p {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -365,7 +409,7 @@ img {
   border-bottom: 1px solid #4f4f4f66;
 }
 
-#config p button {
+#config-user p button {
   padding: 8px;
   cursor: pointer;
   background-color: #0099ff;
@@ -373,22 +417,22 @@ img {
   border-radius: 50%;
 }
 
-#config p button:hover {
+#config-user p button:hover {
   background-color: #047ac9;
 }
 
-#config button i {
+#config-user button i {
   font-size: 16px;
   color: #fff;
 }
 
-#config p input {
+#config-user p input {
   max-width: 200px;
   padding: 4px;
   margin: 0 5px;
 }
 
-#config p span {
+#config-user p span {
   flex: 1;
   margin-left: 15px;
 }
