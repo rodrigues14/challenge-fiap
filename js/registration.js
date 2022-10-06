@@ -4,6 +4,7 @@ const main = document.querySelector("main");
 const btnConfirmar = document.querySelector("#btn-confirm");
 const userName = document.querySelector("#name");
 
+const inputUser = document.querySelectorAll('#registration .input-user');
 const inputNome = document.querySelector("#input-name");
 const inputEmail = document.querySelector("#input-email");
 const inputCarro = document.querySelector("#input-carro");

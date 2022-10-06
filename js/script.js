@@ -78,7 +78,7 @@ let text = [
   "Luz acessa com sucesso!",
   "Câmeras de segurança ativadas!",
   "Porta destrancada com sucesso",
-  "Texto aleátorio",
+  "Janelas abertas com sucesso!",
 ];
 
 function activeBtn() {

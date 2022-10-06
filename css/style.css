@@ -13,6 +13,7 @@
   --btn-hover: #dfdff9;
   --text-color: #000;
   --color-shadow: rgba(0, 0, 0, .3);
+  --color-text-msg: #f0f0f0;
 }
 
 .hide {
@@ -32,6 +33,7 @@ body.dark {
   --btn-color: #ccc;
   --btn-hover: #e5e5e5;
   --color-shadow: rgb(47, 47, 47);
+  --color-text-msg: #e5dddd;
 }
 
 #registration {
@@ -42,6 +44,7 @@ body.dark {
   align-items: center;
   margin-inline: auto;
   max-width: 330px;
+  padding: 5px;
 }
 
 #registration h2 {
@@ -52,8 +55,8 @@ body.dark {
 
 hr {
   background-color: #4f4f4f66;
-  width: 100%;
-  height: 2px;
+  width: 80%;
+  height: 1px;
 }
 
 #registration form {  
@@ -75,6 +78,11 @@ hr {
   border-radius: 10px;
   font-size: 18px;
   width: 100%;
+  border: 2px solid #3e3e3e;
+}
+
+.input-user:invalid {
+  border: 2px solid #ff0000;
 }
 
 .btn {
@@ -90,12 +98,11 @@ hr {
   cursor: pointer;
   color: #e5e5e5;
   font-weight: bold;
+  transition: all .3s ease-in-out;
 }
 
-#registration form button:hover,
-#confirm-name-change:hover {
-  background-color: #0099ff;
-  transition: all .3s ease-in-out;
+.btn:hover {
+  background-color: #008ae5;
 }
 
 header {
@@ -136,7 +143,7 @@ header {
 #nav.active {
   visibility: visible;
   height: 190px;
-  width: 180px;
+  width: 200px;
 }
 
 #box-menu ul {
@@ -208,12 +215,12 @@ h1 {
 }
 
 main {
-  min-height: calc(100vh - 94px);
+  min-height: calc(100vh - 74px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 40px;
-  padding-top: 20px;
+  gap: 30px;
+  padding-top: 15px;
 }
 
 #container {
@@ -269,7 +276,7 @@ img {
   border-radius: 15px;
   padding: 20px;
   background-color: #3CB371;
-  color: #e5dddd;
+  color: var(--color-text-msg);
 }
 
 #msg {
@@ -326,7 +333,7 @@ img {
   max-width: 400px;
   margin-inline: auto;
   color: var(--text-color);
-  padding: 30px 10px 50px;
+  padding: 15px 10px 20px;
 }
 
 #config-line {
@@ -358,7 +365,7 @@ img {
 }
 
 #funcionalidades {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 #funcionalidades a {
@@ -369,6 +376,7 @@ img {
 #modal-funcionalidades {
   color: #FFFAFA;
   background-color: #3b3b3b;
+  z-index: 4;
 }
 
 #modal-funcionalidades h4 {
@@ -401,6 +409,11 @@ img {
   background-color: #ff4040;
 } 
 
+#btns-modal #btn-cancel:hover {
+  transition: all .2s ease-in-out;
+  background-color: #ff3636;
+}
+
 #config-user p {
   display: flex;
   justify-content: space-between;
@@ -416,10 +429,6 @@ img {
   background-color: #0099ff;
   transition: all .3s ease-in-out;
   border-radius: 50%;
-}
-
-#config-user p button:hover {
-  background-color: #047ac9;
 }
 
 #config-user button i {
@@ -439,7 +448,7 @@ img {
 }
 
 #other-settings {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 details, input[type="radio"],

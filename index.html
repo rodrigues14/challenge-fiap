@@ -27,13 +27,13 @@
     <hr>
     <form>
       <label for="input-name">Nome:</label>
-      <input type="text" id="input-name" class="input-user">
+      <input type="text" minlength="2" maxlength="20" id="input-name" class="input-user">
       <label for="input-carro">Carro:</label>
-      <input type="text" id="input-carro" class="input-user">
+      <input type="text" minlength="2" maxlength="10" id="input-carro" class="input-user">
       <label for="input-email">Email:</label>
-      <input type="email" id="input-email" class="input-user">
+      <input type="email" minlength="11" maxlength="30" id="input-email" class="input-user">
       <label for="input-senha">Senha:</label>
-      <input type="password" id="input-senha" class="input-user">
+      <input type="password" minlength="6" maxlength="12" id="input-senha" class="input-user">
 
       <button id="btn-confirm" class="btn">Confirmar</button>
     </form>
@@ -45,10 +45,10 @@
       <nav id="nav">
         <ul>
           <li>
-            <a id="btn-config" class="link" href="index.html">Configurações</a>
+            <a id="btn-config" class="link" href="index.html"> <i class="fa-solid fa-gear"></i> Configurações</a>
           </li>
           <li>
-            <a class="link" href="index.html">Sobre</a>
+            <a class="link" href="index.html"> <i class="fa-solid fa-book"></i> Sobre</a>
           </li>
         </ul>
         <input type="checkbox" class="checkbox" id="chk">
@@ -101,8 +101,8 @@
 
       <div id="btn-box">
         <button class="btn-action take-action">
-          <img src="img/lamp.png" alt=""><br>
-          Lorem ipsum dolor
+          <img src="img/window.svg" alt="Ícone de uma janela"><br>
+          Abrir as janelas
         </button>
       </div>
 
@@ -160,7 +160,7 @@
 
     <div id="funcionalidades">
       <h4>Funcionalidades</h4>
-      <a>Adicionar nova funcionalidade</a>
+      <a> <i class="fa-solid fa-plus"></i> Adicionar nova funcionalidade</a>
 
       <div id="modal-funcionalidades" class="campos-msgs hide">
         <h4>Nova funcionlidade</h4>
