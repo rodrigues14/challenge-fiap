@@ -6,7 +6,7 @@
 
 [Clique aqui para acessar o projeto](https://rodrigues14.github.io/challenge-fiap/)
 
-Projeto desenvolvido durante o Challenge NEXT - BRQ, da fiap, onde o objetivo era criar o layout para um computador de bordo que realiza a comunicação entre o carro e a casa.
+Projeto desenvolvido durante o Challenge NEXT - BRQ, da FIAP, onde o objetivo era criar o layout para um computador de bordo que realiza a comunicação entre o carro e a casa.
 
 ## Tecnologias utilizadas
 
